@@ -5,9 +5,9 @@ Book Author: Paul Crickard
 
 Revised By: Kirimi Dennis
 
-##TABLE OF CONTENTS
+## TABLE OF CONTENTS
 
-###SECTION 1: Building Data Pipelines - Extract, Transform, and Load
+### SECTION 1: Building Data Pipelines - Extract, Transform, and Load
 
 #### 1. What is Data Engineering?
 
