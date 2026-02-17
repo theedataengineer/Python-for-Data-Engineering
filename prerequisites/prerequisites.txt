@@ -1,0 +1,23 @@
+#### To get the most out of this book:
+
+- Have a basic understanding of Python
+- Know the basics on Linux
+
+#### OS Requirements
+
+1. Python 3.X - Windows, MacOS X, Linux
+
+2. Spark 3.x - Linux
+
+3. NiFi 1.x - Windows, MacOS X, Linux
+
+4. PostgreSQL 13.X - Windows, MacOS X, Linux
+
+5. ElasticSearch 7.x - Windows, MacOS X, Linux
+
+6. Kibana 7.x - Windows, MacOS X, Linux
+
+7. Apache Kafka 2.x - Linus, MacOS X
+
+
+For our case, I'll be using Linux which meets all the OS Requirements!
