@@ -69,10 +69,14 @@ Now, the combination of extracting, loading, and transforming data is accomplish
 
 
 ```mermaid
-graph TD;
-	'Source data'-->Extract;
-	Extract-->'Add location';
-	'Add location'-->'Transform date';
-	'Transform date'-->Load;
-	Load-->'Clean data';
+graph LR;
+    A[("Source Data")] --> B[Extract]
+    B --> C["Add location"]
+    C --> D["Transform date"]
+    D --> E[Load]
+    E --> F[("Clean Data")]
+
+    %% Styling to make it look professional
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
 ```
