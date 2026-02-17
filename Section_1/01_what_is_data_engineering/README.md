@@ -70,9 +70,9 @@ Now, the combination of extracting, loading, and transforming data is accomplish
 
 ```mermaid
 graph TD;
-	Source data-->Extract;
-	Extract-->Add location;
-	Add location-->Transform date;
-	Transform date-->Load;
-	Load-->Clean data;
+	'Source data'-->Extract;
+	Extract-->'Add location';
+	'Add location'-->'Transform date';
+	'Transform date'-->Load;
+	Load-->'Clean data';
 ```
