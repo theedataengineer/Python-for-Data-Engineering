@@ -80,3 +80,26 @@ graph LR;
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#bbf,stroke:#333,stroke-width:2px
 ```
+
+
+##### NOTE: 
+
+-- Knowing a little bit more about what data engineering is, and what data engineers do, you should start to get a sense of the responsibilities and skills that data engineers need to acquire. The following section will elaborate on these skills.
+
+
+
+
+##### Required Skills and knowledge to be a data engineer
+
+- 1. At the start of a data pipeline, data engineers need to know how to extract data from files in different formats or different types of databases.
+- This means that data engineers need to know several languages used to perform many different tasks, such as SQL and Python.
+
+- Knowledge of Data Modeling and structures. This is will also need to understand the business and what knowledge and insight they are hoping to extract from the data because this will impact the design of the design of the models.
+
+- The loading of the data into the data warehouse means there needs to be a data warehouse with a schema to hold the data.
+- This is usually the responsibility of the data engineer.
+- Data engineers will need to know the basics of data warehouse design, as well as the types of databases used in their construction.
+
+- Lastly, the entire infrastructure that the data pipeline runs on could be the responsibility of the data engineer.
+- They need to know how to manage Linux servers, as well as how to install and configure software such as Apache Airflow or NiFi.
+- As organizations move to cloud, the data engineer now needs to be familiar with spinning up the infrastructure on the cloud platform used by organization - Amazon, Google Cloud Platform, or Azure.
