@@ -68,17 +68,32 @@ Now, the combination of extracting, loading, and transforming data is accomplish
 
 
 
-    %% Define Nodes
-    S[(Source Data)] --> E[Extract]
-    E --> AL[Add location]
-    AL --> TD[Transform date]
-    TD --> L[Load]
-    L --> CD[(Clean Data)]
 
-    %% Add JSON annotations using subgraphs or notes
-    subgraph " "
-    direction TB
-    S1[{"{ Id: 1, Price:10.99, Date: 1/5/2020... }"}]
-    AL1[{"{ Loc: 'Europe', ... }"}]
-    TD1[{"{ Date: 2020-01-05, ... }"}]
+    %% Main Pipeline Flow
+    subgraph Pipeline ["Figure 1.1 – A pipeline that adds a location and modifies the date"]
+        direction LR
+        S[(Source Data)] --> Extract
+        Extract --> AL[Add location]
+        AL --> TD[Transform date]
+        TD --> Load
+        Load --> CD[(Clean Data)]
     end
+
+    %% Data Snapshots
+    Extract --- D1
+    AL --- D2
+    TD --- D3
+
+    subgraph Snapshots ["Data State Snapshots"]
+        direction LR
+        D1["{<br/>Id: 1,<br/>Price: 10.99,<br/>Date: 1/5/2020 2:23PM<br/>}"]
+        D2["{<br/>Id: 1,<br/>Price: 10.99,<br/>Date: 1/5/2020 2:23PM,<br/>Loc: 'Europe'<br/>}"]
+        D3["{<br/>Id: 1,<br/>Price: 10.99,<br/>Date: 2020-01-05T14:23:00,<br/>Loc: 'Europe'<br/>}"]
+    end
+
+    %% Styling to match the book's clean look
+    style Pipeline fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Snapshots fill:none,stroke:none
+    style D1 fill:#fff,stroke:#ccc,text-align:left
+    style D2 fill:#fff,stroke:#ccc,text-align:left
+    style D3 fill:#fff,stroke:#ccc,text-align:left
