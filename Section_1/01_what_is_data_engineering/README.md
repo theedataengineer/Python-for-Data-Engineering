@@ -65,4 +65,20 @@ Now, the combination of extracting, loading, and transforming data is accomplish
 
 - The data comes into the pipeline raw, or dirty in the sense that there may be missing data or typos in the data, which is then cleaned as it flows through the pipe.
 - After that, it comes out the other side into a data warehouse, where it can be queried.
- 
+
+
+
+    %% Define Nodes
+    S[(Source Data)] --> E[Extract]
+    E --> AL[Add location]
+    AL --> TD[Transform date]
+    TD --> L[Load]
+    L --> CD[(Clean Data)]
+
+    %% Add JSON annotations using subgraphs or notes
+    subgraph " "
+    direction TB
+    S1[{"{ Id: 1, Price:10.99, Date: 1/5/2020... }"}]
+    AL1[{"{ Loc: 'Europe', ... }"}]
+    TD1[{"{ Date: 2020-01-05, ... }"}]
+    end
